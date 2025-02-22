@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign In - CTRL+ESC</title>
+</head>
+<body>
+    <!-- Top Right Navigation Buttons -->
+    <div class="top-right-buttons">
+        <button class="nav-button" onclick="location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="location.href='about.html'">About Us</button>
+        <button class="nav-button" onclick="location.href='chatbot.html'">Chatbot</button>
+        <button class="nav-button" onclick="location.href='neuroflex.html'">NeuroFlex</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="app-title">Sign In</h1>
+        </header>
+        <div class="login-form">
+            <input type="text" id="username" placeholder="Enter your name" required>
+            <input type="password" id="secret-code" placeholder="Enter your secret code" required>
+            <button id="submit">Log In</button>
+        </div>
+        <div class="quote">
+            <p>“Your feedback is important to us!”</p>
+        </div>
+
+        <!-- Questions Section -->
+        <div id="questions-section" style="display: none;">
+            <h2>Let's have some fun!</h2>
+            <div id="question-container"></div>
+            <button id="next-button" style="display: none;">Next Question</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            "On a scale of 'perfectly organized sock drawer' to 'existential sock chaos,' how would you rate your life right now?",
+            "How do you prefer to stay in touch with your close ones? (e.g., phone calls, text messages, in-person, social media)",
+            "Who is you closed one? apart from your family?",
+            "If your daily routine was a breakfast cereal, which one would it be and why? (Think: sugary chaos vs. wholesome grains.)",
+            "Do you believe that the remote control has a mind of its own? (Yes/Definitely yes/Where's the tin foil hat?)",
+            "How many times a day do you have an internal debate about whether or not to eat that last slice of pizza?",
+            "If you could have any superpower for dealing with Mondays, what would it be?",
+            "When you're in a social gathering, are you more of a 'life of the party' or a 'strategically placed houseplant'?",
+            "How often do you pretend to understand a conversation just to avoid awkwardness?",
+            "What's your go-to excuse for avoiding a social event you don't want to attend?",
+            "If you had to describe your social media presence as a food, what would it be?",
+            "How many unread messages are currently haunting your inbox?",
+            "Is pineapple on pizza a culinary masterpiece or a crime against humanity?",
+            "Do you believe that time travel should come with a user manual?",
+            "If you could have a conversation with any historical figure, who would it be and what burning question would you ask?",
+            "What's your stance on the Oxford comma? (Prepare for a heated debate.)",
+            "Do you think that aliens are already among us, and if so, what do you think they're disguised as?",
+            "If you could have a pet mythical creature, which one would you choose and why?",
+            "What's your favorite sound in the world? (Be honest, is it the ice cream truck?)",
+            "If you could live in any fictional world, which one would it be and what would your job be?",
+            "What's the most unusual talent you possess? (Don't be shy, we're all friends here.)",
+            "If your life was a musical, what would be the big show stopping number?"
+        ];
+
+        let currentQuestionIndex = 0;
+
+        document.getElementById('submit').addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default form submission
+            const username = document.getElementById('username').value;
+            const secretCode = document.getElementById('secret-code').value;
+
+            // Here you can add validation logic if needed
+            if (username && secretCode) {
+                alert(`Welcome back, ${username}! Let’s continue your journey.`);
+                document.querySelector('.login-form').style.display = 'none'; // Hide login form
+                document.getElementById('questions-section').style.display = 'block'; // Show questions section
+                showNextQuestion(); // Show the first question
+            } else {
+                alert("Please fill in all fields.");
+            }
+        });
+
+        function showNextQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                const questionContainer = document.getElementById('question-container');
+                questionContainer.innerHTML = `
+                    <p>${questions[currentQuestionIndex]}</p>
+                    <input type="text" id="answer" placeholder="Your answer here..." />
+                `;
+                document.getElementById('next-button').style.display = 'block'; // Show next button
+            } else {
+                document.getElementById('question-container').innerHTML = "<p>Thank you for your responses!</p>";
+                document.getElementById('next-button').style.display = 'none'; // Hide next button
+            }
+        }
+
+        document.getElementById('next-button').addEventListener('click', () => {
+            const answer = document.getElementById('answer').value.trim();
+            if (answer) {
+                // You can process the answer here (e.g., save it, send it to a server, etc.)
+                console.log(`Answer to question ${currentQuestionIndex + 1}: ${answer}`);
+                currentQuestionIndex++; // Move to the next question
+                showNextQuestion(); // Show the next question
+                document.getElementById('answer').value = ""; // Clear the answer input
+            } else {
+                alert("Please provide an answer before proceeding.");
+            }
+        });
+    </script>
+</body>
+</html>

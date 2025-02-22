@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Was Your Day? - NeuroFlex</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="how-was-your-day.js" defer></script>
+</head>
+<body>
+    <div class="top-right-buttons">
+        <button class="nav-button" onclick="location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="location.href='about.html'">About Us</button>
+        <button class="nav-button" onclick="location.href='chatbot.html'">Chatbot</button>
+        <button class="nav-button" onclick="location.href='neuroflex.html'">NeuroFlex</button>
+    </div>
+
+    <div class="container">
+        <h1 class="app-title">How Was Your Day?</h1>
+        <p>Share your thoughts about your day below:</p>
+
+        <div class="day-log">
+            <textarea id="dayLogInput" rows="10" placeholder="Type your thoughts here..."></textarea>
+            <button id="submitDayLogButton">Submit</button>
+        </div>
+
+        <div id="confirmationMessage" style="display: none; margin-top: 20px;">
+            <p>Thank you for sharing your day! Your streak has been updated.</p>
+        </div>
+    </div>
+</body>
+</html>

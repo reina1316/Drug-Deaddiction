@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaks - NeuroFlex</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="streaks.js" defer></script>
+</head>
+<body>
+    <div class="top-right-buttons">
+        <button class="nav-button" onclick="location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="location.href='about.html'">About Us</button>
+        <button class="nav-button" onclick="location.href='chatbot.html'">Chatbot</button>
+        <button class="nav-button" onclick="location.href='neuroflex.html'">NeuroFlex</button>
+    </div>
+
+    <div class="container">
+        <h1 class="app-title">Streaks</h1>
+        <p>Track your daily logins and upload memes to keep your streak alive!</p>
+
+        <div class="streak-info">
+            <h2>Your Current Streak: <span id="streakCount">0</span> days</h2>
+            <button id="loginButton">Log In Today</button>
+            <button id="dayLogButton" onclick="location.href='how-was-your-day.html'">How Was Your Day?</button> <!-- Updated button to link to the new page -->
+        </div>
+        
+        <div class="upload-meme">
+            <h2>Upload a Meme</h2>
+            <input type="file" id="memeInput" accept="image/*">
+            <button id="uploadButton">Upload Meme</button>
+        </div>
+
+        <div class="meme-gallery">
+            <h2>Your Memes</h2>
+            <div id="memeContainer"></div>
+        </div>
+    </div>
+</body>
+</html>

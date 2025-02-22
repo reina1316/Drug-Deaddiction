@@ -1,0 +1,467 @@
+/* General Styles */
+body {
+    background-color: #fcfbf4;
+    color: #121008;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    animation: fadeIn 1s; /* Animation effect for body */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background-color: rgba(199, 122, 122, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(84, 131, 84, 0.5);
+    max-width: 500px;
+    width: 100%;
+    animation: slideIn 1s; /* Animation effect for container */
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* App Icon */
+.app-icon img {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* App Title */
+.app-title {
+    font-size: 48px;
+    margin: 20px 0;
+    color: #1b1b0f;
+    animation: bounce 1s; /* Animation effect for title */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+}
+
+/* Welcome Message */
+.welcome-message h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Sign-In Options */
+.sign-in-options button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #050605;
+    background-color: #936060;
+    border: 2px solid #935e82;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sign-in-options button:hover {
+    background-color: #fcfbf4;
+    color: #936060;
+    box-shadow: 0 0 10px #9e589c;
+}
+
+/* Login Form */
+.login-form {
+    display: block;
+    margin-top: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #151016;
+    background-color: #936060;
+    border: 2px solid #0e0d0e;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #936060;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #936060;
+    box-shadow: 0 0 10px #121212;
+}
+
+/* Quote Section */
+.quote {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+/* Top Right Buttons */
+.top-right-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-button {
+    background-color: rgba(106, 63, 63, 0.7);
+    color: #efeded;
+    border: 2px solid #cd676a;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #936060;
+    color: #000000;
+    box-shadow: 0 0 10px #647fad;
+}
+
+/* About Content */
+.about-content {
+    padding: 20px;
+    text-align: left;
+    max-width: 600px; /* Limit width for better readability */
+    animation: fadeIn 1s;
+}
+
+/* Leaderboard Styles */
+.leaderboard-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(50, 205, 50, 0.5);
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.leaderboard-quote {
+    font-size: 18px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Leaderboard Ranking */
+.leaderboard {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.rank {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #f3de95;
+    transition: background-color 0.3s;
+}
+
+.rank:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.rank-number {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.rank-name {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.rank-score {
+    font-weight: bold;
+}
+
+/* Highlight Top 3 Ranks */
+.rank:nth-child(1),
+.rank:nth-child(2),
+.rank:nth-child(3) {
+    color: #ffd700; /* Gold for 1st place */
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.rank:nth-child(2) {
+    color: #c0c0c0; /* Silver for 2nd place */
+}
+
+.rank:nth-child(3) {
+    color: #cd7f32; /* Bronze for 3rd place */
+}
+
+/* General Styles */
+body {
+    background-color: #fcfbf4; /* Dark background for the entire page */
+    color: #100f0d; /* Light text color */
+    font-family: 'Arial', sans-serif; /* Font style */
+    margin: 0;
+    padding: 0;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 400px; /* Fixed width for the chat container */
+    margin: 20px auto; /* Center the chat container */
+    background-color: rgba(217, 216, 169, 0.7); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(19, 21, 19, 0.5); /* Shadow effect */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #a76a9c; /* Header background color */
+    padding: 10px; /* Padding for the header */
+    text-align: center; /* Center the header text */
+}
+
+/* Chat Box */
+.chat-box {
+    height: 300px; /* Fixed height for the chat box */
+    padding: 10px; /* Padding inside the chat box */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Message Styles */
+.chat-box p {
+    margin: 5px 0; /* Margin for messages */
+    padding: 10px; /* Padding for messages */
+    border-radius: 5px; /* Rounded corners for messages */
+}
+
+/* User Message */
+.chat-box p.user {
+    background-color: #d1e7dd; /* Light green for user messages */
+    text-align: right; /* Align user messages to the right */
+}
+
+/* Bot Message */
+.chat-box p.bot {
+    background-color: #f8d7da; /* Light red for bot messages */
+    text-align: left; /* Align bot messages to the left */
+}
+
+/* Input Area */
+.input-area {
+    display: flex; /* Flexbox for input and button */
+    padding: 10px; /* Padding for the input area */
+}
+
+/* Input Field */
+#user-input {
+    flex-grow: 1; /* Allow input to grow */
+    padding: 10px; /* Padding for input */
+    border: 2px solid #32cda9; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Space between input and button */
+}
+
+/* Send Button */
+#send-button {
+    padding: 10px; /* Padding for button */
+    background-color: #4c32cd; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+/* Button Hover Effect */
+#send-button:hover {
+    background-color: #f15e6a; /* Change color on hover */
+}
+
+
+/* Rewards Page Styles */
+.container {
+    max-width: 800px; /* Increase max width for better layout */
+    margin: 20px auto; /* Center the container */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px; /* Padding for the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 90vh; /* Limit height to allow scrolling */
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+    height: 20px; /* Height of the progress bar */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.progress-fill {
+    background-color: #4caf50; /* Green fill color */
+    height: 100%; /* Fill height */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Daily Check-In Log Styles */
+.calendar {
+    display: flex; /* Flexbox for calendar layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center the days */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.day {
+    width: 40px; /* Fixed width for each day */
+    height: 40px; /* Fixed height for each day */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    border: 1px solid #ccc; /* Border for each day */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px; /* Margin for spacing */
+    background-color: #f9f9f9; /* Light background */
+}
+
+.day.checked {
+    background-color: #4caf50; /* Green background for checked days */
+    color: white; /* White text for checked days */
+}
+
+/* Rewards Grid Styles */
+.rewards-grid {
+    display: grid; /* Grid layout for rewards */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.reward-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 10px; /* Padding for the card */
+    text-align: center; /* Center text */
+}
+
+.reward-card img {
+    width: 100%; /* Responsive image */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+/* Milestone Badges Styles */
+.milestone-badges {
+    display: flex; /* Flexbox for badges */
+    justify-content: center; /* Center badges */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.badge {
+    background-color: #ffd700; /* Gold background for badges */
+    color: #fff; /* White text */
+    padding: 10px 15px; /* Padding for badges */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px; /* Margin for spacing */
+}
+
+/* Community Engagement Styles */
+.community-feed {
+    background-color: rgba(240, 240, 240, 0.8); /* Light gray background */
+    padding: 10px; /* Padding for the feed */
+    border-radius: 5px; /* Rounded corners */
+    max-height: 150px; /* Limit height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Call to Action Button */
+.start-journey-button {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.start-journey-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Streaks Button Styles */
+#dayLogButton {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect */
+    margin-top: 10px; /* Space above the button */
+}
+
+#dayLogButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Day Log Styles */
+.day-log {
+    margin-top: 20px; /* Space above the log section */
+}
+
+#dayLogInput {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for the text area */
+    border: 2px solid #32cda9; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    resize: none; /* Disable resizing */
+}
+
+#submitDayLogButton {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition effect */
+    margin-top: 10px; /* Space above the button */
+}
+
+#submitDayLogButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
