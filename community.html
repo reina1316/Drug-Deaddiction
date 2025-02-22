@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - CTRL+ESC</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="community.js" defer></script> <!-- Include the community.js file -->
+</head>
+<body>
+    <!-- Top Right Navigation Buttons -->
+    <div class="top-right-buttons">
+        <button class="nav-button" onclick="location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="location.href='about.html'">About Us</button>
+        <button class="nav-button" onclick="location.href='chatbot.html'">Chatbot</button>
+        <button class="nav-button" onclick="location.href='neuroflex.html'">NeuroFlex</button>
+       
+    </div>
+
+    <div class="container">
+        <h1 class="app-title">Community</h1>
+        <p>Welcome to the CTRL+ESC Community! Here you can connect with others, share your experiences, and find support on your recovery journey.</p>
+        
+        <div class="chat-container">
+            <div class="friend-list">
+                <h2>Friends</h2>
+                <ul id="friend-list">
+                    <li onclick="selectFriend('Alice')">Alice <span class="online-dot"></span></li>
+                    <li onclick="selectFriend('Bob')">Bob </span></li>
+                    <li onclick="selectFriend('Zara')">Zara</li>
+                    <li onclick="selectFriend('David')">David <span class="online-dot"></span></li>
+                    <li onclick="selectFriend('Eve')">Eve</li>
+                </ul>
+            </div>
+            <div class="chat-window">
+                <h2 id="chat-title">Community Chat</h2>
+                <div id="message-board" class="message-board">
+                    <!-- Messages will be displayed here -->
+                </div>
+                <input type="text" id="message-input" placeholder="Type your message here..." />
+                <button id="post-button">Send</button>
+            </div>
+        </div>
+
+        <div class="community-content">
+            <h2>Community Messages</h2>
+            <div id="community-board" class="community-board">
+                <!-- Community messages will be displayed here -->
+            </div>
+            <input type="text" id="community-input" placeholder="Type your community message here..." />
+            <button id="community-post-button">Post to Community</button>
+        </div>
+    </div>
+</body>
+</html>

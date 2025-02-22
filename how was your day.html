@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Was Your Day? - NeuroFlex</title>
+    <title>How Was Your Day? - CTRL+ESC</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="how-was-your-day.js" defer></script>
+    <script src="dayLog.js" defer></script> <!-- Include a new JavaScript file for this page -->
 </head>
 <body>
     <div class="top-right-buttons">
@@ -17,16 +17,10 @@
 
     <div class="container">
         <h1 class="app-title">How Was Your Day?</h1>
-        <p>Share your thoughts about your day below:</p>
-
-        <div class="day-log">
-            <textarea id="dayLogInput" rows="10" placeholder="Type your thoughts here..."></textarea>
-            <button id="submitDayLogButton">Submit</button>
-        </div>
-
-        <div id="confirmationMessage" style="display: none; margin-top: 20px;">
-            <p>Thank you for sharing your day! Your streak has been updated.</p>
-        </div>
+        <p>Please share your thoughts about your day:</p>
+        <textarea id="dayLogInput" rows="10" placeholder="Type your paragraph here..."></textarea>
+        <button id="submitDayLogButton">Submit</button>
+        <div id="dayLogOutput" class="day-log-output"></div>
     </div>
 </body>
 </html>

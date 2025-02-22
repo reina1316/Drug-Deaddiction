@@ -25,22 +25,6 @@ document.getElementById('loginButton').onclick = function() {
     }
 };
 
-// Handle daily log update
-document.getElementById('dayLogButton').onclick = function() {
-    const lastLogDate = localStorage.getItem('lastLogDate');
-    const today = new Date().toDateString();
-
-    if (lastLogDate !== today) {
-        streakCount++;
-        localStorage.setItem('streakCount', streakCount);
-        localStorage.setItem('lastLogDate', today);
-        document.getElementById('streakCount').innerText = streakCount;
-        alert('Thank you for logging your day! Your streak has been updated.');
-    } else {
-        alert('You have already logged your day today. Keep it up!');
-    }
-};
-
 // Handle meme upload
 document.getElementById('uploadButton').onclick = function() {
     const memeInput = document.getElementById('memeInput');

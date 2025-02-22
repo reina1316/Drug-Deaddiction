@@ -227,15 +227,6 @@ body {
     color: #cd7f32; /* Bronze for 3rd place */
 }
 
-/* General Styles */
-body {
-    background-color: #fcfbf4; /* Dark background for the entire page */
-    color: #100f0d; /* Light text color */
-    font-family: 'Arial', sans-serif; /* Font style */
-    margin: 0;
-    padding: 0;
-}
-
 /* Chat Container */
 .chat-container {
     width: 400px; /* Fixed width for the chat container */
@@ -260,6 +251,7 @@ body {
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
+/* Message Styles */
 /* Message Styles */
 .chat-box p {
     margin: 5px 0; /* Margin for messages */
@@ -309,7 +301,6 @@ body {
 #send-button:hover {
     background-color: #f15e6a; /* Change color on hover */
 }
-
 
 /* Rewards Page Styles */
 .container {
@@ -377,91 +368,19 @@ body {
     padding: 10px; /* Padding for the card */
     text-align: center; /* Center text */
 }
-
-.reward-card img {
-    width: 100%; /* Responsive image */
-    border-radius: 5px; /* Rounded corners for images */
-}
-
-/* Milestone Badges Styles */
-.milestone-badges {
-    display: flex; /* Flexbox for badges */
-    justify-content: center; /* Center badges */
-    margin: 10px 0; /* Margin for spacing */
-}
-
-.badge {
-    background-color: #ffd700; /* Gold background for badges */
-    color: #fff; /* White text */
-    padding: 10px 15px; /* Padding for badges */
-    border-radius: 5px; /* Rounded corners */
-    margin: 5px; /* Margin for spacing */
-}
-
-/* Community Engagement Styles */
-.community-feed {
-    background-color: rgba(240, 240, 240, 0.8); /* Light gray background */
-    padding: 10px; /* Padding for the feed */
-    border-radius: 5px; /* Rounded corners */
-    max-height: 150px; /* Limit height */
-    overflow-y: auto; /* Enable vertical scrolling */
-}
-
-/* Call to Action Button */
-.start-journey-button {
-    background-color: #4caf50; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding for button */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Transition effect */
-}
-
-.start-journey-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-/* Streaks Button Styles */
-#dayLogButton {
-    background-color: #4caf50; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding for button */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Transition effect */
-    margin-top: 10px; /* Space above the button */
-}
-
-#dayLogButton:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
 /* Day Log Styles */
-.day-log {
-    margin-top: 20px; /* Space above the log section */
-}
-
 #dayLogInput {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding for the text area */
-    border: 2px solid #32cda9; /* Border color */
-    border-radius: 5px; /* Rounded corners */
-    resize: none; /* Disable resizing */
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #0e0d0e;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-#submitDayLogButton {
-    background-color: #4caf50; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding for button */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Transition effect */
-    margin-top: 10px; /* Space above the button */
-}
-
-#submitDayLogButton:hover {
-    background-color: #45a049; /* Darker green on hover */
+.day-log-output {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(199, 122, 122, 0.7);
+    border-radius: 10px;
 }
